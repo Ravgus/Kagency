@@ -1,5 +1,7 @@
 <?php
 
+/*mainPage/index => mainPage - controller, index - method*/
+
 return [
     '' => 'mainPage/index', // главная страница
     'login' => 'auth/index', // страница авторизации
@@ -24,11 +26,11 @@ return [
     'admin/add_prod' => 'admin/addProduct',
 
     //api
-    'api/categories/(\\d+)/(\\d+)' => 'product/getProduct/$1/$2', // получение данных о продукте по id категории и id продукта
-    'api/categories/([\\w ]+)/([\\w ]+)' => 'product/getProduct/$1/$2', // получение данных о продукте по названию категории и названию продукта
-    'api/categories/(\\d+)' => 'product/getProducts/$1', // получение продуктов категории (по id)
-    'api/categories/([\\w ]+)' => 'product/getProducts/$1', // получение продуктов категории (по названию категории)
-    'api/categories' => 'category/getCategories', // получение категорий
+    'api/categories/(\\d+)/(\\d+)' => 'api/getProduct/$1/$2', // получение данных о продукте по id категории и id продукта
+    'api/categories/([\\w ]+)/([\\w ]+)' => 'api/getProduct/$1/$2', // получение данных о продукте по названию категории и названию продукта
+    'api/categories/(\\d+)' => 'api/getProducts/$1', // получение продуктов категории (по id)
+    'api/categories/([\\w ]+)' => 'api/getProducts/$1', // получение продуктов категории (по названию категории)
+    'api/categories' => 'api/getCategories', // получение категорий
 
 
 ];

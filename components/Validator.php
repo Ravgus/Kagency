@@ -10,9 +10,9 @@ class Validator
     public static function validateUser($content)
     {
         $regexps = [
-            '/^[\\w\\s]{1,99}$/',
-            '/^.{1,99}$/',
-            '/^[\\w]{8,25}$/',
+            '/^[\\w\\s]{1,99}$/ui',
+            '/^.{1,99}$/ui',
+            '/^[\\w]{8,25}$/ui',
         ];
 
         $messages = [
@@ -38,8 +38,8 @@ class Validator
     public static function validateProduct($content)
     {
         $regexps = [
-            '/^[\\w\\s]{1,254}$/',
-            '/^.+$/',
+            '/^[\\w\\s]{1,254}$/ui',
+            '/^.+$/ui',
             '/^[\\d]{1,9}$/',
             '/^[\\d]{1,9}$/',
         ];
@@ -65,7 +65,7 @@ class Validator
     public static function validateCategory($content)
     {
         $regexps = [
-            '/^[\\w\\s]{1,254}$/',
+            '/^[\\w\\s]{1,254}$/ui',
         ];
 
         $messages = [

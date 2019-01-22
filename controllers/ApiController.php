@@ -1,14 +1,22 @@
 <?php
 
 include_once ROOT.'/models/Product.php';
+include_once ROOT.'/models/Category.php';
 
-class ProductController
+class ApiController
 {
     private $db;
 
     public function __construct($db)
     {
         $this->db = $db;
+    }
+
+    public function actionGetCategories()
+    {
+        $categories = new Category($this->db);
+        echo json_encode($categories->get());
+        return true;
     }
 
     public function actionGetProducts($parameter)
